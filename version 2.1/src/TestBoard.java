@@ -1,46 +1,57 @@
-import static org.junit.jupiter.api.Assertions.*;
-
+import org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
 /**
- * 
- */
-
-/**
- * @author Admin
+ * @author anusha
  *
  */
 public class TestBoard {
-	public void teseboard() {
-		int[][] arrayint = new[6][3];
-		
-		arrayint[0][0]=1;
-		arrayint[0][0]=1;
-		arrayint[0][0]=1;
-		arrayint[0][0]=1;
-		arrayint[0][0]=1;
-		arrayint[0][0]=1;
-		arrayint[0][0]=1;
-		arrayint[0][0]=1;
-		
-		Board b=new Board( 6,arrayint);
-		
-		public void testctreateboard();{
-			
+	public void test_create_board(){
+		int[][] arrayint=new int[6][2];
+		arrayint[0][0]=0;
+		arrayint[0][1]=4;
+		arrayint[1][0]=1;
+		arrayint[1][1]=1;
+		arrayint[2][0]=2;
+		arrayint[2][1]=1;
+		arrayint[3][0]=3;
+		arrayint[3][1]=2;
+		arrayint[4][0]=5;
+		arrayint[4][1]=4;
+		Board b = new Board(6,arrayint);
+		System.out.println("======TEST ONE EXECUTED=======");
+		Assertions.assertEquals(".....\n.....\n*.....\n.....\n......\n.....",b.createBoard(5, arrayint) );
 		}
-		
-		public void testprintboard();{
-			
+	public void test_countLiveCells(){
+		int[][] arrayint=new int[6][2];
+		arrayint[0][0]=0;
+		arrayint[0][1]=4;
+		arrayint[1][0]=1;
+		arrayint[1][1]=1;
+		arrayint[2][0]=2;
+		arrayint[2][1]=1;
+		arrayint[3][0]=3;
+		arrayint[3][1]=2;
+		arrayint[4][0]=5;
+		arrayint[4][1]=4;
+		Board b = new Board(6,arrayint);
+		System.out.println("======TEST ONE EXECUTED=======");
+		Assertions.assertEquals(1,b.countLiveCells(2,3) );
 		}
-		Board z = new Board();
-		public void testcount() {
-			System.out.println("======TEST TWO EXECUTED=======");
-			Assertions.assertEquals(2, b.count(5,6));
+	public void  generateNextGeneration() {
+		int[][] arrayint=new int[6][2];
+		arrayint[0][0]=0;
+		arrayint[0][1]=4;
+		arrayint[1][0]=1;
+		arrayint[1][1]=1;
+		arrayint[2][0]=2;
+		arrayint[2][1]=1;
+		arrayint[3][0]=3;
+		arrayint[3][1]=2;
+		arrayint[4][0]=5;
+		arrayint[4][1]=4;
+		Board b = new Board(6,arrayint);
+		System.out.println("======TEST ONE EXECUTED=======");
+		Assertions.assertEquals(".....\n......\n......\n.....\n......\n......",b.generateNextGeneration());
 		}
-		public void testcount() {
-			System.out.println("======TEST THREE EXECUTED=======");
-			Assertions.assertEquals(2, b.count(3,4));
-		}
-
-}
 }

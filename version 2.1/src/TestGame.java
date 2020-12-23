@@ -11,6 +11,6 @@ import org.junit.jupiter.api.Test;
  *
  */
 class TestGame {
-	public void liveCellIsAlive() throws Exception {
+	public void liveCellIsAlive() {
         assertTrue(LiveCell.INSTANCE.isAlive());
 	}
