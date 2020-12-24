@@ -35,7 +35,7 @@ public class TestBoard {
 		arrayint[4][0]=5;
 		arrayint[4][1]=4;
 		Board b = new Board(6,arrayint);
-		System.out.println("======TEST ONE EXECUTED=======");
+		System.out.println("======TEST TWO EXECUTED=======");
 		Assertions.assertEquals(1,b.countLiveCells(2,3) );
 		}
 	public void  generateNextGeneration() {
@@ -51,7 +51,7 @@ public class TestBoard {
 		arrayint[4][0]=5;
 		arrayint[4][1]=4;
 		Board b = new Board(6,arrayint);
-		System.out.println("======TEST ONE EXECUTED=======");
+		System.out.println("======TEST THREE EXECUTED=======");
 		Assertions.assertEquals(".....\n......\n......\n.....\n......\n......",b.generateNextGeneration());
 		}
 }
